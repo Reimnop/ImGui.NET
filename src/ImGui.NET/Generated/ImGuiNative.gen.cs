@@ -1226,5 +1226,15 @@ namespace ImGuiNET
         public static extern Vector4* ImVec4_ImVec4Nil();
         [DllImport("cimgui", CallingConvention = CallingConvention.Cdecl)]
         public static extern Vector4* ImVec4_ImVec4Float(float _x, float _y, float _z, float _w);
+
+        // Manually added
+        [DllImport("cimgui", CallingConvention = CallingConvention.Cdecl)]
+        public static extern IntPtr igGetCurrentWindow();
+        [DllImport("cimgui", CallingConvention = CallingConvention.Cdecl)]
+        public static extern uint igGetActiveID();
+        [DllImport("cimgui", CallingConvention = CallingConvention.Cdecl)]
+        public static extern void igSetActiveID(uint id, IntPtr window);
+        [DllImport("cimgui", CallingConvention = CallingConvention.Cdecl)]
+        public static extern void igClearActiveID();
     }
 }

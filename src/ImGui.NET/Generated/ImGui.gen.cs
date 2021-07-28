@@ -14332,5 +14332,25 @@ namespace ImGuiNET
             }
             return ret != 0;
         }
+
+        // Manually added
+        public static IntPtr GetCurrentWindow()
+        {
+            IntPtr ret = ImGuiNative.igGetCurrentWindow();
+            return ret;
+        }
+        public static uint GetActiveID()
+        {
+            uint ret = ImGuiNative.igGetActiveID();
+            return ret;
+        }
+        public static void SetActiveID(uint id, IntPtr window)
+        {
+            ImGuiNative.igSetActiveID(id, window);
+        }
+        public static void ClearActiveID()
+        {
+            ImGuiNative.igClearActiveID();
+        }
     }
 }
